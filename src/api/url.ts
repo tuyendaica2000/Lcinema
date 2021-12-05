@@ -29,9 +29,9 @@ export const MOVIE_GENRES = (genres: string): string => {
 export const TV_GENRES = (genres: string): string => {
     return `discover/tv?api_key=${API_KEY}&with_genres=${genres}`
 }
-export const NEW_GENRES = (type: string): string => {
-    return `${type}/now_playing?api_key=${API_KEY}&language=en-US`
-} 
+export const NEW_MOVIE = `movie/now_playing?api_key=${API_KEY}&language=en-US`
+export const NEW_TV = `tv/on_the_air?api_key=${API_KEY}&language=en-US`
+ 
 export const POPULAR_GENRES = (type: string): string => {
     return `${type}/popular?api_key=${API_KEY}&language=en-US&page=1`
 } 

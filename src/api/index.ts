@@ -12,7 +12,8 @@ import {
   EP_URL,
   MOVIE_GENRES,
   TV_GENRES,
-  NEW_GENRES,
+  NEW_MOVIE,
+  NEW_TV,
   POPULAR_GENRES,
 } from "./url";
 
@@ -197,11 +198,11 @@ export const getDataTVPage = async (): Promise<any> => {
 export const getDataNewPage = async (): Promise<any> => {
   const dataInfo: { [key: string]: { url: string; type: string } } = {
     "Latest Movie": {
-      url: `${NEW_GENRES('movie')}`,
+      url: `${NEW_MOVIE}`,
       type: "movie",
     },
     "Latest TV Series": {
-      url: `${NEW_GENRES('tv')}`,
+      url: `${NEW_TV}`,
       type: "tv",
     },
     'Popular Movie': {
