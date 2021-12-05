@@ -15,7 +15,7 @@ const MovieInfo:FC = () => {
     type: 'movie' | 'tv';
     id: string;
   };
-  const { data, isLoading, error } = useQuery("MovieDetail", () => {
+  const { data, error } = useQuery("MovieDetail", () => {
     return getMovieDetail(id, type);
   });
 
@@ -39,15 +39,6 @@ const MovieInfo:FC = () => {
       setMovieData(data["data"]);
     }
   }, [data]);
-
-  if (isLoading) {
-    return (
-      <>
-        <div className={classes.nav}></div>
-        <h1>Loading</h1>
-      </>
-    );
-  }
 
   if (error) {
     return (
