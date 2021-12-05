@@ -1,0 +1,22 @@
+@import '../../Style/var.scss';
+
+@keyframes skeletonLoading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    0% {
+        background-color: hsl(204, 16%, 75%);
+    }
+}
+
+.skeleton {
+    opacity: .7;
+    animation: skeletonLoading 1s linear infinite alternate;
+    border-radius: 5px;
+}
+
+
+
+
+

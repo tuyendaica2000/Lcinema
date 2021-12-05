@@ -1,0 +1,160 @@
+@import "../../Style/var.scss";
+
+.single_movie_wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.img_background {
+  height: 320px;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+.img_background_footer {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: -1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(14, 14, 14, 0.6),
+    #141414
+  );
+}
+
+.single_movie {
+  width: 90%;
+  height: 330px;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  left: 5%;
+  top: 75%;
+}
+
+.single_movie_info {
+  margin-left: 3%;
+}
+
+.single_movie img {
+  width: 220px;
+  height: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+.single_movie_info h2,
+.single_movie_info h4 {
+  margin-top: 12px;
+  font-weight: 600;
+  color: $white;
+}
+
+.single_movie_info h4 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.single_movie p {
+  max-width: 800px;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  line-height: 1.8;
+  color: $white;
+  overflow: auto;
+  max-height: 157px;
+  overflow-x: hidden;
+  padding-right: 20px;
+  margin-bottom: 15px;
+}
+
+.single_movie p::-webkit-scrollbar {
+  display: none;
+}
+
+.btn_movie_group {
+  display: flex;
+  justify-content: flex-start;
+  height: 65px;
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  margin: 10px 0;
+  text-align: center;
+  text-transform: capitalize;
+  background: #222222;
+  color: $white;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: $content;
+  cursor: pointer;
+}
+
+.btn span {
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .single_movie {
+    flex-direction: column;
+    justify-content: center;
+    top: 110%;
+  }
+
+  .single_movie img,
+  .single_movie p {
+    align-self: center;
+  }
+
+  .btn_movie_group {
+    justify-content: space-around;
+  }
+
+  .single_movie h2 {
+    text-align: center;
+  }
+  .btn {
+    background-color: #4e4d4d;
+  }
+}
+
+.page_error {
+  text-align: center;
+  padding: 2rem;
+}
+
+.footer {
+  width: 100vw;
+  height: 300px;
+  margin-top: 25%;
+  @include breakpoint('lg') {
+    margin-top: 33%;
+  }
+  @include breakpoint('md') {
+    margin-top: 50%;
+  }
+
+  @include breakpoint('sm') {
+    margin-top: 150%;
+  }
+  @media (max-width: 290px) {
+    margin-top: 200%;
+  }
+}
+

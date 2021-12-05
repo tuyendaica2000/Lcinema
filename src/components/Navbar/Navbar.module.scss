@@ -1,0 +1,134 @@
+@import '../../Style/var.scss';
+
+.navbar {
+    position: fixed;
+    display: flex;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    height: 65px;
+    background-color: transparent;
+    transition: $transition;
+    z-index: 10;
+    &_icon {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 20px;
+        cursor: pointer;
+        &_img {
+            height: 100%;
+            width: 30px;
+            object-fit: cover;
+        }
+        &_name {
+            display: flex;
+            margin: auto;
+            font-size: 40px;
+            font-weight: 400;
+            color: $content;
+        }
+    }
+    &_content {
+        display: flex; 
+        flex: 1;
+        margin: 0 30px;
+        height: 100%;
+        position: relative;
+        justify-content: space-between;
+        &_pages {
+            cursor: pointer;
+            display: flex;
+            flex: 1;
+            justify-content: flex-start;
+            font-size: 20px;
+            margin: auto;
+            color: $white;
+            font-weight: 450;
+            transition: $transition;
+            &_page {
+                margin: 0 10px;
+                &:hover {
+                    opacity: .5;
+                }
+            }
+            .active{
+                font-weight: 500;
+            }
+        }
+        &_search{
+            color: $white;
+            align-self: center;
+            font-size: 30px;
+            font-weight: normal;
+            &_link {
+                color: $white;
+            }
+        }
+    }
+    &_sub {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        justify-content: center;
+        transition: $transition;
+        height: 30px;
+        p {
+            font-size: 18px;
+            display: flex;
+            cursor: pointer;
+            span {
+                transform: translateY(10%);
+                margin: 2px 3px;
+            }
+        }
+        &_modal {
+            background-color: rgba(0,0,0,.65);
+            backdrop-filter: blur(10px);
+            display: none;
+            position: fixed;
+            top: 0px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            transition: $transition;
+            z-index: 1;
+            &_item {
+                align-self: center;
+                font-size: 20px;
+                margin: auto 0;
+            }
+            &_close {
+                position: absolute;
+                top: 3%;
+                right: 3%;
+                font-size: 30px;
+                cursor: pointer;
+            }
+        }
+        &_modal.active {
+            display: flex;
+        }
+    }
+    &_sub.active {
+        background-color: $black
+    }
+    @include breakpoint('lg') {
+        &_sub {
+            display: flex;
+        }
+        &_content {
+            justify-content: flex-end;
+            &_pages {
+                display: none;
+            }
+        }
+    }
+    
+}
+
+.navbar.active {
+    background-color: $black;
+}

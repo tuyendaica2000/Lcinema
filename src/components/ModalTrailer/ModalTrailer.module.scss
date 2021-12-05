@@ -1,0 +1,55 @@
+@import '../../Style/var.scss';
+
+.modal {
+    display: flex;
+    position: fixed;
+    background-color: transparent;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    color: $white;
+    height: 100%;
+    .modal_content {
+        max-height: 80%;
+        width: 50vw;
+        background-color: $bg;
+        margin: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        &_header {
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            margin: 5% 5%;
+            height: 20px;
+            h4 {
+                font-size: 18px;
+                font-weight: 600;
+            }
+            &_close {
+                cursor: pointer;
+            }
+        }
+        &_body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            &_item {
+                width: 80%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+                h5 {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@import "../../Style/var.scss";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.page {
+  width: 42px;
+  height: 42px;
+  background-color:#424141;
+  border-radius: 5px;
+  margin-left: 8px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.page:hover {
+  background-color: $content;
+  opacity: .7;
+}
+
+.btn_page span {
+  transform: translateY(10%);
+}
+
+.btn_page {
+  outline: none;
+  border: none;
+}
+
+.page_link {
+  display: block;
+  line-height: 100%;
+  color: $white;
+  transform: translateY(80%);
+  font-size: 1rem;
+}
+
+.page_active {
+  background-color: $content;
+}
