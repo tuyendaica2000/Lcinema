@@ -74,6 +74,19 @@
     }
     @include breakpoint('md') {
         flex-direction: column;
+        &_main {
+            &_video {
+                height: 30vh;
+            }
+            &_info {
+                width: 80%;
+                align-self: center;
+            }
+        }
+        &_sub {
+            margin-left: 35px;
+        }
     }
 }
 
+  

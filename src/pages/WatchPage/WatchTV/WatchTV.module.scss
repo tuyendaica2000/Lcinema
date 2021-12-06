@@ -33,7 +33,7 @@
         font-weight: 600;
         font-size: 20px;
         &:hover {
-            color: $content;
+          color: $content;
         }
       }
     }
@@ -55,7 +55,7 @@
         margin-bottom: 13px;
         cursor: pointer;
         border-radius: 5px;
-        background-color: rgba(194, 188, 188, 0.13) ;
+        background-color: rgba(194, 188, 188, 0.13);
         &_img {
           width: 20%;
           height: 100%;
@@ -70,7 +70,7 @@
             font-weight: 600;
           }
           p {
-              font-size: 13px;
+            font-size: 13px;
           }
         }
         &:hover {
@@ -121,5 +121,17 @@
   }
   @include breakpoint("md") {
     flex-direction: column;
+    &_main {
+      &_video {
+        height: 30vh;
+      }
+      &_info {
+        width: 80%;
+        align-self: center;
+      }
+    }
+    &_sub {
+      margin-left: 35px;
+    }
   }
 }
