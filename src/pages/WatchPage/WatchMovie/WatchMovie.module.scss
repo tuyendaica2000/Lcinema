@@ -75,7 +75,7 @@
     @include breakpoint('md') {
         flex-direction: column;
         &_main {
-            width: 94%;
+            width: 100%;
             &_video {
                 height: 30vh;
             }

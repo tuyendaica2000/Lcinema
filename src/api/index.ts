@@ -153,7 +153,7 @@ export const getDataTVPage = async (): Promise<any> => {
   const dataInfo: { [key: string]: { url: string; type: string } } = {
     "Popular TV Series": {
       url: `${DISCOVER_TV_URL}`,
-      type: "movie",
+      type: "tv",
     },
     'Action & Adventure': {
       url: `${TV_GENRES('10759')}`,

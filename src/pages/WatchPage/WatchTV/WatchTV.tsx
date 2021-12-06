@@ -64,7 +64,7 @@ const WatchTV: FC = () => {
               seasonTV.map((item, index) => {
                 if (item.air_date !== null) {
                   return (
-                    <div key={index}>
+                    <div className={classes.content_sub_scroll_wrap} key={index}>
                       <div
                         className={classes.content_sub_scroll_item}
                         onClick={() => handleOpenInfo(index)}
@@ -81,7 +81,7 @@ const WatchTV: FC = () => {
                       </div>
                       {infoNumOpen === index && (
                         <div
-                          className={classes.content_sub_scroll_item_dropdown}
+                          className={classes.content_sub_scroll_item_dropdown} 
                         >
                           {item.episodes?.map((child, ep) => {
                             return (
