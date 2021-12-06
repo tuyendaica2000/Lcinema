@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import { getMovieDetail } from "../../../api/index";
 import { Movie } from "../../../interface/Imovies";
 import { BASE_IMG } from "../../../api/url";
+import { Link } from 'react-router-dom'
 
 import classes from "./WatchMovie.module.scss";
 
@@ -54,14 +55,14 @@ const WatchMovie: FC = () => {
             {data &&
               recomList?.map((item, index) => {
                 return (
-                  <div className={classes.content_sub_scroll_item} key={index}>
+                  <Link to={`/movie/${item.id}&${item.media_type}`} className={classes.content_sub_scroll_item} key={index}>
                     <img
                       className={classes.content_sub_item_img}
                       src={`${BASE_IMG}${item.poster_path}`}
                       alt="img"
                     />
                     <h3>{item.title}</h3>
-                  </div>
+                  </Link>
                 );
               })}
           </div>
