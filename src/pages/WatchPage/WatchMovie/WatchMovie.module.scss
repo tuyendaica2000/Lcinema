@@ -3,6 +3,9 @@
 .nav {
     width: 100vw;
     height: 20vh;
+    @include breakpoint('lg') {
+        height: 15vh;
+    }
 }
 
 .content {
@@ -72,7 +75,7 @@
             }
         }
     }
-    @include breakpoint('md') {
+    @include breakpoint('lg') {
         flex-direction: column;
         &_main {
             width: 100%;
@@ -80,14 +83,13 @@
                 height: 30vh;
             }
             &_info {
-                width: 80%;
-                align-self: center;
+                width: 100%;
+                align-self: flex-start;
             }
         }
         &_sub {
-            margin-left: 35px;
+            margin-left: 0;
         }
     }
 }
 
-  
