@@ -1,6 +1,6 @@
-import { config as dotenv } from "dotenv"
+import * as dotenv from 'dotenv';
 
-dotenv()
+dotenv.config();
 
 
 const API_KEY = process.env.REACT_APP_API_KEY;
